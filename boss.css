@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-box {
+    background: #222;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 20px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+
+.textbox input:focus {
+    border-color: #00ffcc;
+}
+
+.textbox input::placeholder {
+    color: #aaa;
+}
+
+.textbox input:focus::placeholder {
+    color: transparent;
+}
+
+.textbox input:focus + .neon {
+    animation: neonMove 1.5s infinite alternate;
+}
+
+.neon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    opacity: 0.5;
+    z-index: 1;
+    animation: neonMove 1.5s infinite alternate;
+}
+
+@keyframes neonMove {
+    0% {
+        box-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+}
+
+.button {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #00ffcc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+button:hover {
+    background-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.signup {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
